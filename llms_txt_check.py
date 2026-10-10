@@ -20,6 +20,6 @@ def main():
     else: probs.append("no /llms.txt")
     for p in probs: print("FAIL", p)
     if not probs: print("PASS: spec-shaped llms.txt")
-    else: print("\nShape check only; no file guarantees AI citations or rankings. Free full check (llms.txt + FAQ/Organization JSON-LD): https://citekit.adjudi.com/?utm_source=github&utm_medium=cli&utm_campaign=citekit-intent-w2&utm_content=llms-txt-check")
+    else: print("\nShape check only; no file guarantees AI citations or rankings. Free full check (llms.txt + FAQ/Organization JSON-LD): https://citekit.adjudi.com/?url="+urllib.parse.quote(base+"/",safe="")+"&utm_source=github&utm_medium=cli&utm_campaign=citekit-intent-w2&utm_content=llms-txt-check")
     sys.exit(1 if probs and "--fail" in sys.argv else 0)
 if __name__=="__main__": main()
